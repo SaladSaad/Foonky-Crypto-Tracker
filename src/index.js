@@ -57,11 +57,11 @@ function getUSD(cryptoName) {
     var url = "https://min-api.cryptocompare.com/data/price?fsym=" + cryptoName + "&tsyms=USD";
     axios.get(url)
         .then(res => {
+            //updating crypto value on page
             var cryptos = res.data.USD;
             cryptoPrice.innerText = '$' + cryptos.toLocaleString('en') //make proper number format with comma separation
 
-
-            //Saving which cryptos have exceeded target price
+            //getting all crytos. Localizing target $ for specific crypto
             let fileData = loadJSON('cryptos');
             for (var i = 0; i < fileData.length; i++) {
                 if (fileData[i].name == cryptoName) {
@@ -137,7 +137,7 @@ var table = document.getElementById('mainTable');
         a.className='icon brands fa-twitter';
         a.id=cryptoName+'Delete';
         a.href='#';
-        a.onclick='yourmom();';
+        a.onclick=function(){console.log('delete initiated')};
 
         let brandSpan=document.createElement('span');
         brandSpan.className='label';
@@ -154,7 +154,7 @@ var table = document.getElementById('mainTable');
     setTimeout(notify, 5000);
 })();
 
-//creates notifications
+//checks if getUSD pushed notifylist. Empties list when done.
 function notify() {
     if (notifyList!=null){
         if (check.checked) {
@@ -189,7 +189,7 @@ check.addEventListener('click', function(event) {
     check.checked=fileData;
 })();
 
-function yourmom(){
+function deleter(){
     let table=document.getElementById('mainTable');
 
     console.log('bruh');
