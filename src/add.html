@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <h3 class="major"> Set Target Values</h3>
+
+        <form name='ipcForm' onSubmit="JavaScript:sendForm(event)" id='ipcForm'>
+            <div class='fields'>
+                <div class='field half'>
+                    <label for="cryptoCurrencies">Currency</label>
+                    <select name="cryptoCurrencies" id="cryptoCurrencies"></select>
+                </div>
+                <div class='field half'>
+                    <label for="targetPrice">Value</label>
+                    <input type="text" name='targetPrice' id='targetPrice' placeholder="USD">
+                </div>
+                <div class='field'>
+                    <input type="submit" value='Set Target' class='primary'>
+                    <input type="reset" value="Reset">
+                </div>
+            </div>
+        </form>
+
+        <a id='closeBtn'>Close Window</a><br>
+    </div>
+    <script src='add.js'></script>
+</body>
+
+</html>

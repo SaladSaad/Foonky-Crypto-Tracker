@@ -1,0 +1,21 @@
+{
+  "name": "tut_btc",
+  "productName": "BTC Tracker",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win/BTC_icon.ico --prune=true --out=release-builds --win32metadata.CompanyName=\"Salads Inc.\" --win32metadata.FileDescription=\"Tracks BTC\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "node-fetch": "^2.6.1",
+    "unsplash-js": "^6.3.0"
+  },
+  "devDependencies": {
+    "electron": "9.1.2",
+    "electron-packager": "^15.2.0"
+  }
+}

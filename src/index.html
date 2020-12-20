@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BTC Tracker</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class='table-wrapper'>
+            <table id="mainTable">
+                <thead>
+                    <tr>
+                        <th>
+                            Cryptocurrency
+                        </th>
+                        <th>
+                            Current Value [USD]
+                        </th>
+                        <th>
+                            Target Price
+                        </th>
+                        <th>
+                            Remove Crypto
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <ul class="actions">
+            <li><a class="button primary" id='notifyBtn'>Set Target Prices</a></li>
+        </ul>
+        <div class='field'>
+            <input type="checkbox" id='notify-check' name='notify-check' value='chB1'>
+            <label for="notify-check">Send Notifications?</label>
+        </div>
+        <footer id='footer'>
+            <p class='copyright'>Saad Sheikh. Images: <a href="https://source.unsplash.com" target='_blank'>Unsplash</a> </p>
+        </footer>
+    </div>
+
+
+    <script src='index.js'></script>
+    <div id='bg' style="--image-url: url('https://source.unsplash.com/weekly?nature')"></div>
+
+
+</body>
+</html>
