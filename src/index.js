@@ -137,7 +137,8 @@ var table = document.getElementById('mainTable');
         a.className='icon brands fa-twitter';
         a.id=cryptoName+'Delete';
         a.href='#';
-        a.onclick=function(){console.log('delete initiated')};
+        //a.onclick=function(){console.log('delete initiated', this.id)};
+        a.onclick=deleteRow;
 
         let brandSpan=document.createElement('span');
         brandSpan.className='label';
@@ -153,7 +154,12 @@ var table = document.getElementById('mainTable');
     //timeout allows getUSD to populate notifyList
     setTimeout(notify, 5000);
 })();
-
+function deleteRow(t)
+{
+    console.log("delete row function called", t)
+    var row = t.parentNode.parentNode;
+    //document.getElementById("mainTable").deleteRow(row.rowIndex);
+}
 //checks if getUSD pushed notifylist. Empties list when done.
 function notify() {
     if (notifyList!=null){
@@ -188,13 +194,6 @@ check.addEventListener('click', function(event) {
     let fileData=loadJSON('checked');
     check.checked=fileData;
 })();
-
-function deleter(){
-    let table=document.getElementById('mainTable');
-
-    console.log('bruh');
-}
-
 
 notifyBtn.addEventListener('click', function(event) {
     const modalPath = path.join('file://', __dirname, 'add.html')
