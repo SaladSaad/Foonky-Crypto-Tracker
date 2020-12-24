@@ -132,13 +132,13 @@ var table = document.getElementById('mainTable');
         targetContainer.appendChild(p);
         /*-- Target container end --*/
 
-        /* Test button container */
+        /* Delete button container */
         let a=document.createElement('a');
         a.className='icon brands fa-twitter';
         a.id=cryptoName+'Delete';
         a.href='#';
-        //a.onclick=function(){console.log('delete initiated', this.id)};
-        a.onclick=deleteRow;
+        a.onclick=function(){console.log('delete initiated')};
+        //a.onclick=function(){deleteRow(this.parentNode.id)};
 
         let brandSpan=document.createElement('span');
         brandSpan.className='label';
@@ -156,10 +156,21 @@ var table = document.getElementById('mainTable');
 })();
 function deleteRow(t)
 {
-    console.log("delete row function called", t)
-    var row = t.parentNode.parentNode;
+    console.log("delete row function called",t)
+    //var row = t.parentNode.parentNode;
     //document.getElementById("mainTable").deleteRow(row.rowIndex);
 }
+
+(function test(){
+    document.getElementById('mainTable').addEventListener('click',function(item){
+        var row=item.path[1];
+        console.log(row);
+        if (row.classList.contains('highlight'))
+            row.classList.remove('highlight');
+        else
+            row.classList.add('highlight');
+    })
+})();
 //checks if getUSD pushed notifylist. Empties list when done.
 function notify() {
     if (notifyList!=null){
