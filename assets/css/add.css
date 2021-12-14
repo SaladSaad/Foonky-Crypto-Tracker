@@ -1,9 +1,11 @@
-.draggable{
-  -webkit-app-region:drag;
+.draggable {
+  -webkit-app-region: drag;
 }
-.non-draggable{
-  -webkit-app-region:no-drag;
+
+.non-draggable {
+  -webkit-app-region: no-drag;
 }
+
 .invisible-scrollbar::-webkit-scrollbar {
   display: none;
 }
