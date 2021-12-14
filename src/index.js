@@ -201,8 +201,8 @@ notifyBtn.addEventListener('click', function(event) {
     let win = new BrowserWindow({
         frame: false,
         alwaysOnTop: true,
-        width: 650,
-        height: 370,
+        width: 660,
+        height: 400,
         webPreferences: {
             nodeIntegration: true
         }

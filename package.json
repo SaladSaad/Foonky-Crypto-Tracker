@@ -10,12 +10,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.24.0",
     "node-fetch": "^2.6.1",
     "unsplash-js": "^6.3.0"
   },
   "devDependencies": {
     "electron": "9.1.2",
     "electron-packager": "^15.2.0"
-  }
+  },
+  "description": "A desktop app running off electron that shows you the cryptos you care about.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaladSaad/Foonky-Crypto-Tracker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/SaladSaad/Foonky-Crypto-Tracker/issues"
+  },
+  "homepage": "https://github.com/SaladSaad/Foonky-Crypto-Tracker#readme"
 }

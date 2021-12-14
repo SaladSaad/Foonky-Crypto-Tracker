@@ -1180,7 +1180,9 @@
 .fa-church:before {
     content: "\f51d"
 }
-
+.fa-circle-xmark:before {
+    content: "\f057"
+}
 .fa-circle:before {
     content: "\f111"
 }
@@ -5660,7 +5662,9 @@
 .fa-wrench:before {
     content: "\f0ad"
 }
-
+.fa-x:before {
+    content: "\58"
+}
 .fa-x-ray:before {
     content: "\f497"
 }

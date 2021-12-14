@@ -15,9 +15,9 @@ function createWindow() {
     // Create the browser window.
     win = new BrowserWindow({
         show:false,
-        width: 800,
-        height: 600,
-        icon: path.join(__dirname, 'assets/icons/win/BTC_icon.ico'),
+        width: 1500,
+        height: 800,
+        icon: path.join(__dirname, 'assets/icons/png/BTC_icon.png'),
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModule: true
