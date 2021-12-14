@@ -1,34 +1,34 @@
 {
-    "checked":false,
-    "cryptos": [{
-        "name": "BTC",
-        "value": 50
-    }, {
-        "name": "ETH",
-        "value": 0
-    }, {
-        "name": "LINK",
-        "value": 3000
-    }, {
-        "name": "EOS",
-        "value": 4000
-    }, {
-        "name": "LTC",
-        "value": 5000
-    }, {
-        "name": "XRP",
-        "value": 6000
-    }, {
-        "name": "BCH",
-        "value": 7000
-    }, {
-        "name": "TRX",
-        "value": 8000
-    }, {
-        "name": "OMG",
-        "value": 9000
-    }, {
-        "name": "JST",
-        "value": 0.005
-    }]
+  "checked": false,
+  "cryptos": [{
+    "name": "BTC",
+    "value": 50
+  }, {
+    "name": "ETH",
+    "value": 0
+  }, {
+    "name": "LINK",
+    "value": 3000
+  }, {
+    "name": "EOS",
+    "value": 4000
+  }, {
+    "name": "LTC",
+    "value": 5000
+  }, {
+    "name": "XRP",
+    "value": 6000
+  }, {
+    "name": "BCH",
+    "value": 7000
+  }, {
+    "name": "TRX",
+    "value": 8000
+  }, {
+    "name": "OMG",
+    "value": 9000
+  }, {
+    "name": "JST",
+    "value": 0.005
+  }]
 }

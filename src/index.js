@@ -50,9 +50,15 @@ function writeJSON(cryptoCurrency, newTargetPrice) {
 
 };
 
+function deleteRow(r){
+  let fileData=loadJSON();
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("mainTable").deleteRow(i);
+}
+
 //Acquires current value of specified crypto and updates prior value in HTML with current value
 function getUSD(cryptoName) {
-    let fileData = loadJSON('cryptos');
+    var fileData = loadJSON('cryptos');
     var cryptoPrice = document.getElementById(cryptoName + 'Price');
     var url = "https://min-api.cryptocompare.com/data/price?fsym=" + cryptoName + "&tsyms=USD";
     axios.get(url)
@@ -62,7 +68,6 @@ function getUSD(cryptoName) {
             cryptoPrice.innerText = '$' + cryptos.toLocaleString('en') //make proper number format with comma separation
 
             //getting all crytos. Localizing target $ for specific crypto
-            let fileData = loadJSON('cryptos');
             for (var i = 0; i < fileData.length; i++) {
                 if (fileData[i].name == cryptoName) {
                     var cryptoTargetPrice = fileData[i].value;
@@ -96,7 +101,7 @@ var table = document.getElementById('mainTable');
         var nameContainer = tr.insertCell();
         var priceContainer = tr.insertCell();
         var targetContainer = tr.insertCell();
-        var rightContainer = tr.insertCell();
+        var deleteContainer = tr.insertCell();
 
         /* Name container start */
         var name = document.createElement('h3');
@@ -134,17 +139,16 @@ var table = document.getElementById('mainTable');
 
         /* Test button container */
         let a=document.createElement('a');
-        a.className='icon brands fa-twitter';
-        a.id=cryptoName+'Delete';
+        a.className='icon brands fa-twitter delete';
         a.href='#';
-        a.onclick=function(){console.log('delete initiated')};
+        a.onclick=function(){deleteRow(this)};
 
         let brandSpan=document.createElement('span');
         brandSpan.className='label';
         brandSpan.innerText='Twitter'
 
         a.appendChild(brandSpan);
-        rightContainer.appendChild(a);
+        deleteContainer.appendChild(a);
 
 
         getUSD(cryptoName);
@@ -153,6 +157,7 @@ var table = document.getElementById('mainTable');
     //timeout allows getUSD to populate notifyList
     setTimeout(notify, 5000);
 })();
+
 
 //checks if getUSD pushed notifylist. Empties list when done.
 function notify() {
