@@ -982,6 +982,7 @@ input[type="reset"],
 input[type="button"],
 button,
 .button {
+  font-family: "Source Sans Pro";
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;

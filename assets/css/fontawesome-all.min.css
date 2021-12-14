@@ -1215,9 +1215,6 @@
 .fa-clock:before {
     content: "\f017"
 }
-.fa-clock-rotate-left:before {
-    content: "\f1da"
-}
 .fa-clone:before {
     content: "\f24d"
 }
@@ -4166,9 +4163,6 @@
     content: "\f3e9"
 }
 
-.fa-rotate-left:before {
-    content: "\f2ea"
-}
 .fa-route:before {
     content: "\f4d7"
 }
